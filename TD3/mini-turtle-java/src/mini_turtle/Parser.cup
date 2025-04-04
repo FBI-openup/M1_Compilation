@@ -1,0 +1,26 @@
+import java_cup.runtime.*;
+import java.util.*;
+
+/* on déclare ici les symboles terminaux (les lexèmes),
+   qui seront notamment réutilisés dans Lexer.flex */
+terminal String IDENT;
+terminal PLUS;
+/* À COMPLÉTER */
+
+/* on déclare ici les symboles non terminaux */
+non terminal File file;
+/* À COMPLÉTER */
+
+/* on déclare ici les priorités (de la moins forte à la plus forte)
+   et les associativités */
+precedence left PLUS;
+/* À COMPLÉTER */
+
+/* le point d'entrée de la grammaire est le non terminal "file" */
+start with file;
+
+/* on écrit ci-dessous les différentes règles de la grammaire */
+file ::=
+  /* À COMPLÉTER */ 
+    {: RESULT = new File(new LinkedList<Def> (), new Sblock()); /* À  MODIFIER */; :}
+;
